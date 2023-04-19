@@ -10,8 +10,17 @@ class PersonalData extends StatefulWidget {
 class _PersonalDataState extends State<PersonalData> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: const Text('Personal Data'),
+      ),
+      body: const Center(
         child: Text('Hello world'),
       ),
     );
