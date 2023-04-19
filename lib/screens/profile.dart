@@ -31,9 +31,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: [
           Container(
-            height: 100.0,
+            height: 100.0, 
             decoration: BoxDecoration(
-              color: HexColor('#4A5568'),
+              color: HexColor('#F4F4F5'),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: GoogleFonts.poppins(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
-                        color: Colors.white,
+                        // color: Colors.white,
                       ),
                     ),
                     const SizedBox(height: 5.0),
