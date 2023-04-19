@@ -23,7 +23,7 @@ class _PersonalDataState extends State<PersonalData> {
       ),
       body: Center(
         child: Text(
-          'Personal Data Page',
+          'This is Personal Data Page',
           style: GoogleFonts.poppins(
             fontSize: 24,
             fontWeight: FontWeight.w500,

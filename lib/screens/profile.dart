@@ -131,7 +131,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // Contacts
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ContactPage()),
+                );
+              },
               child: Container(
                 padding: const EdgeInsets.all(20),
                 height: 70,
@@ -168,7 +173,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // Experiences
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ExperiencesPage()),
+                );
+              },
               child: Container(
                 padding: const EdgeInsets.all(20),
                 height: 70,

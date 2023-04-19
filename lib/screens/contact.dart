@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Contact extends StatefulWidget {
-  const Contact({Key? key}) : super(key: key);
+class ContactPage extends StatefulWidget {
+  const ContactPage({Key? key}) : super(key: key);
 
   @override
-  State<Contact> createState() => _ContactState();
+  State<ContactPage> createState() => _ContactPageState();
 }
 
-class _ContactState extends State<Contact> {
+class _ContactPageState extends State<ContactPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,11 +19,11 @@ class _ContactState extends State<Contact> {
             Navigator.pop(context);
           },
         ),
-        title: const Text('Personal Data'),
+        title: const Text('Contact Me'),
       ),
       body: Center(
         child: Text(
-          'Personal Data Page',
+          'This is Contact Page',
           style: GoogleFonts.poppins(
             fontSize: 24,
             fontWeight: FontWeight.w500,
