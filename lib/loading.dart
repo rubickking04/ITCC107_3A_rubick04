@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'screens/profile.dart';
 
@@ -14,6 +14,8 @@ class _LoadingState extends State<Loading> {
   @override
   void initState() {
     super.initState();
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     // Wait for 2 seconds before navigating to the homepage
     Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
