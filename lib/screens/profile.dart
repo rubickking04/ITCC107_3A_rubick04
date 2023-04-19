@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'dart:io';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -16,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: HexColor('#E5E7EB'),
+      // backgroundColor: HexColor('#4A5568'),
       appBar: AppBar(
         systemOverlayStyle:
             const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
@@ -28,49 +29,324 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 100.0, 
-            decoration: BoxDecoration(
-              color: HexColor('#F4F4F5'),
+
+      body: Container(
+        child: Column(
+          children: [
+            // Profile Content
+            Container(
+              padding: const EdgeInsets.all(10),
+              height: 100.0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const CircleAvatar(
+                    radius: 30.0,
+                    backgroundImage: AssetImage('assets/images/usman.jpg'),
+                  ),
+                  const SizedBox(width: 10.0),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Al-Fhaigar J. Usman',
+                        style: GoogleFonts.poppins(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      const SizedBox(height: 5.0),
+                      Text(
+                        'Fullstack Developer, Software Developer',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.grey[500],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const CircleAvatar(
-                  radius: 30.0,
-                  backgroundImage: AssetImage('assets/images/usman.jpg'),
-                ),
-                const SizedBox(width: 10.0),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+
+            // Divider 1
+            Container(
+              height: 5,
+              decoration: BoxDecoration(
+                color: HexColor('#E7E5E4'),
+              ),
+            ),
+
+            // Personal Data
+            InkWell(
+              onTap: () {},
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                height: 70,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'Al-Fhaigar J. Usman',
-                      style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                        // color: Colors.white,
-                      ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.info,
+                          color: Colors.grey[500],
+                          size: 35,
+                        ),
+                        const SizedBox(width: 12),
+                        Text(
+                          'Personal Data',
+                          style: GoogleFonts.poppins(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 5.0),
-                    Text(
-                      'Fullstack Developer, Software Developer',
-                      style: GoogleFonts.poppins(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey[300],
-                      ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.grey[600],
+                      size: 16,
                     ),
                   ],
                 ),
-              ],
+              ),
             ),
-          ),
-          const SizedBox(height: 20.0),
-        ],
+
+            // Contacts
+            InkWell(
+              onTap: () {},
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                height: 70,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.phone,
+                          color: Colors.grey[500],
+                          size: 35,
+                        ),
+                        const SizedBox(width: 12),
+                        Text(
+                          'Contacts',
+                          style: GoogleFonts.poppins(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.grey[600],
+                      size: 16,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // Experiences
+            InkWell(
+              onTap: () {},
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                height: 70,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.badge,
+                          color: Colors.grey[500],
+                          size: 35,
+                        ),
+                        const SizedBox(width: 12),
+                        Text(
+                          'Experiences',
+                          style: GoogleFonts.poppins(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.grey[600],
+                      size: 16,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // Settings
+            InkWell(
+              onTap: () {},
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                height: 70,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.settings,
+                          color: Colors.grey[500],
+                          size: 35,
+                        ),
+                        const SizedBox(width: 12),
+                        Text(
+                          'Settings',
+                          style: GoogleFonts.poppins(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.grey[600],
+                      size: 16,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // Divider 2
+            Container(
+              height: 5,
+              decoration: BoxDecoration(
+                color: HexColor('#E7E5E4'),
+              ),
+            ),
+
+            // Frequently Asked Questions
+            InkWell(
+              onTap: () {},
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                height: 70,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.help_outline,
+                          color: Colors.grey[500],
+                          size: 35,
+                        ),
+                        const SizedBox(width: 12),
+                        Text(
+                          'FAQs',
+                          style: GoogleFonts.poppins(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.grey[600],
+                      size: 16,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // Questions
+            InkWell(
+              onTap: () {},
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                height: 70,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.question_answer,
+                          color: Colors.grey[500],
+                          size: 35,
+                        ),
+                        const SizedBox(width: 12),
+                        Text(
+                          'Questions',
+                          style: GoogleFonts.poppins(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.grey[600],
+                      size: 16,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // Community
+            InkWell(
+              onTap: () {},
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                height: 70,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.people_alt,
+                          color: Colors.grey[500],
+                          size: 35,
+                        ),
+                        const SizedBox(width: 12),
+                        Text(
+                          'Community',
+                          style: GoogleFonts.poppins(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.grey[600],
+                      size: 16,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
