@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'screens/profile.dart';
 
@@ -26,10 +26,15 @@ class _LoadingState extends State<Loading> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height,
-      color: Colors.white,
-      child: const Center(child: CircularProgressIndicator()),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Loading...'),
+      ),
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        color: Colors.white,
+        child: const Center(child: CircularProgressIndicator()),
+      ),
     );
   }
 }
