@@ -216,7 +216,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // Settings
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SettingsPage()),
+                );
+              },
               child: Container(
                 padding: const EdgeInsets.all(20),
                 height: 70,
@@ -261,7 +266,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // Frequently Asked Questions
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FAQsPage()),
+                );
+              },
               child: Container(
                 padding: const EdgeInsets.all(20),
                 height: 70,
@@ -298,7 +308,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // Questions
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const QuestionsPage()),
+                );
+              },
               child: Container(
                 padding: const EdgeInsets.all(20),
                 height: 70,
@@ -335,7 +351,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // Community
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const CommunityPage()),
+                );
+              },
               child: Container(
                 padding: const EdgeInsets.all(20),
                 height: 70,

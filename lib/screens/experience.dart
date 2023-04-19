@@ -19,11 +19,11 @@ class _ExperiencesPageState extends State<ExperiencesPage> {
             Navigator.pop(context);
           },
         ),
-        title: const Text('Personal Data'),
+        title: const Text('Experiences'),
       ),
       body: Center(
         child: Text(
-          'This is Personal Data Page',
+          'This is Experiences Page',
           style: GoogleFonts.poppins(
             fontSize: 24,
             fontWeight: FontWeight.w500,
