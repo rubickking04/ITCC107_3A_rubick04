@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'dart:io';
+import 'personal_data.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -81,7 +82,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // Personal Data
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>const PersonalData()),
+                );
+              },
               child: Container(
                 padding: const EdgeInsets.all(20),
                 height: 70,
