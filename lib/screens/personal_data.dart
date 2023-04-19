@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PersonalData extends StatefulWidget {
   const PersonalData({Key? key}) : super(key: key);
@@ -20,8 +21,15 @@ class _PersonalDataState extends State<PersonalData> {
         ),
         title: const Text('Personal Data'),
       ),
-      body: const Center(
-        child: Text('Hello world'),
+      body: Center(
+        child: Text(
+          'Personal Data Page',
+          style: GoogleFonts.poppins(
+            fontSize: 24,
+            fontWeight: FontWeight.w500,
+            color: Colors.grey[700],
+          ),
+        ),
       ),
     );
   }

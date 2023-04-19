@@ -4,6 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'dart:io';
 import 'personal_data.dart';
+import 'contact.dart';
+import 'experience.dart';
+import 'settings.dart';
+import 'frequently_asked_questions.dart';
+import 'questions.dart';
+import 'community.dart';
 import '../loading.dart';
 
 class MyHomePage extends StatefulWidget {
