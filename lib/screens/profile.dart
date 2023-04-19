@@ -66,10 +66,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       const SizedBox(height: 5.0),
                       Text(
-                        'Fullstack Developer, Software Developer',
+                        'CTO and Software Engineer at Micro Union Inc.',
                         style: GoogleFonts.poppins(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
                           color: Colors.grey[500],
                         ),
                       ),
